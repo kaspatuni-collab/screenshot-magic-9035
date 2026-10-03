@@ -13,7 +13,7 @@ export function FloatingHearts({ count = 14 }: { count?: number }) {
         delay: Math.random() * 14,
         dur: 12 + Math.random() * 12,
         size: 10 + Math.random() * 14,
-        s: SYMBOLS[i % SYMBOLS.length],
+        s: SYMBOLS[i % SYMBOLS.length] ?? "♡",
       })),
     );
   }, [count]);
@@ -46,7 +46,7 @@ export function Burst({ count = 18, spread = 140 }: { count?: number; spread?: n
         dx: Math.cos(a) * r,
         dy: Math.sin(a) * r - 40,
         rot: Math.random() * 180 - 90,
-        s: SYMBOLS[i % SYMBOLS.length],
+        s: SYMBOLS[i % SYMBOLS.length] ?? "♡",
         size: 12 + Math.random() * 12,
         delay: Math.random() * 0.15,
       };
@@ -82,7 +82,7 @@ export function FadeIn({ children, className = "" }: { children: ReactNode; clas
     if (!el) return;
     const io = new IntersectionObserver(
       ([e]) => {
-        if (e.isIntersecting) {
+        if (e?.isIntersecting) {
           el.classList.add("is-visible");
           io.disconnect();
         }
