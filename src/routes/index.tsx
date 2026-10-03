@@ -175,20 +175,17 @@ function VideoSection() {
   return (
     <Section>
       <SectionTitle>{video.title}</SectionTitle>
-      <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl border-4 border-blush bg-card shadow-soft">
-        {video.src ? (
-          <video controls playsInline preload="metadata" poster={video.poster} className="aspect-video w-full bg-foreground/5">
-            <source src={video.src} />
-          </video>
-        ) : (
-          <div className="relative aspect-video w-full">
-            <img src={video.poster} alt="" className="h-full w-full object-cover opacity-60" loading="lazy" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-card text-2xl text-primary shadow-soft">▶</span>
-              <p className="mt-3 font-semibold text-foreground">Our Roblox video goes here</p>
-            </div>
-          </div>
-        )}
+      <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl border-2 border-primary/25 bg-card shadow-soft">
+        <video
+          controls
+          playsInline
+          preload="metadata"
+          poster={video.poster}
+          className="aspect-video w-full bg-foreground/5 object-contain"
+        >
+          <source src={video.src} type="video/mp4" />
+          Your browser can't play this video — but the caption still stands. ♡
+        </video>
       </div>
       <p className="mt-6 text-center font-hand text-2xl text-foreground sm:text-3xl">{video.caption}</p>
     </Section>
