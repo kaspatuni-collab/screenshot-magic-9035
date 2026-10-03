@@ -4,14 +4,12 @@
 //  in this one file. To use your own photos: drop them in src/assets/
 //  and swap the imports below (e.g. import her1 from "@/assets/her-1.jpg").
 // =====================================================================
-import ph1 from "@/assets/placeholder-1.jpg"; // REPLACE with a photo of her
-import ph2 from "@/assets/placeholder-2.jpg"; // REPLACE with a photo of you / both
-import ph3 from "@/assets/placeholder-3.jpg"; // REPLACE with a photo of her
+import minecraft from "@/assets/minecraft.png.asset.json";
 import robloxPoster from "@/assets/roblox-poster.jpg.asset.json";
 
 export const names = {
-  her: "Her Name",
-  me: "Your Name",
+  her: "Marta",
+  me: "Kaspar",
 };
 
 export const hero = {
@@ -35,12 +33,12 @@ export type Photo = { src: string; caption?: string; style: "polaroid" | "rounde
 export const gallery: { title: string; photos: Photo[] } = {
   title: "Little Moments ♡",
   photos: [
-    { src: ph1, caption: "Absolutely beautiful.", style: "polaroid" },
-    { src: ph2, caption: "My favourite person to annoy.", style: "rounded" },
-    { src: ph3, caption: "How are you actually this pretty?", style: "polaroid" },
-    { src: ph2, caption: "One of my favourite pictures of you.", style: "polaroid" },
-    { src: ph3, caption: "Wish I was there.", style: "rounded" },
-    { src: ph1, caption: "", style: "polaroid" },
+    { src: "/images/little-memories/her1.png", caption: "Absolutely beautiful.", style: "polaroid" },
+    { src: "/images/little-memories/her2.png", caption: "My favourite person to annoy.", style: "rounded" },
+    { src: "/images/little-memories/her3.png", caption: "How are you actually this pretty?", style: "polaroid" },
+    { src: "/images/little-memories/her4.png", caption: "One of my favourite pictures of you.", style: "polaroid" },
+    { src: "/images/little-memories/hergoofy.png", caption: "Wish I was there.", style: "rounded" },
+    { src: minecraft.url, caption: "", style: "polaroid" },
   ],
 };
 
