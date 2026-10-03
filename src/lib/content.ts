@@ -7,6 +7,7 @@
 import ph1 from "@/assets/placeholder-1.jpg"; // REPLACE with a photo of her
 import ph2 from "@/assets/placeholder-2.jpg"; // REPLACE with a photo of you / both
 import ph3 from "@/assets/placeholder-3.jpg"; // REPLACE with a photo of her
+import robloxPoster from "@/assets/roblox-poster.jpg.asset.json";
 
 export const names = {
   her: "Her Name",
@@ -45,10 +46,8 @@ export const gallery: { title: string; photos: Photo[] } = {
 
 export const video = {
   title: "One of My Favourite Things ♡",
-  // REPLACE: put your video in /public (e.g. public/roblox.mp4) and set src: "/roblox.mp4"
-  // Leave src empty to show a placeholder card.
-  src: "",
-  poster: ph2,
+  src: "https://res.cloudinary.com/wybllvie/video/upload/v1790988906/MedalTVScreenRecording20260918232844175-trim-1789769185627.mp4",
+  poster: robloxPoster.url,
   caption: "Just two idiots playing Roblox together ♡",
 };
 
